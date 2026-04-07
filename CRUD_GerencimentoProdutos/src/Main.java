@@ -10,7 +10,8 @@ public class Main {
         boolean continuarRodando = true;
 
         do {
-            System.out.println("Menu");
+            System.out.println("Bem vindo ao sistema de gerenciamento de Produtos! ");
+            System.out.println("[1] - CADASTRAR PRODUTO");
             System.out.println("[2] - LISTAR PRODUTOS");
             System.out.println("[3] - ATUALIZAR PRODUTO");
             System.out.println("[4] - DELETAR");
@@ -20,6 +21,15 @@ public class Main {
             int opcaoUsuario = sc.nextInt();
 
             switch (opcaoUsuario) {
+                case 1:
+                    sc.nextLine();
+                    System.out.println("Bem vindo ao cadastro de Produtos!");
+                    System.out.print("Informe o nome do Produto: ");
+                    String nomeProduto = sc.nextLine();
+
+                    gProdutos.CadastrarProduto(nomeProduto);
+                    break;
+            }
                 case 2:
                     sc.nextLine();
                     System.out.println("PRODUTOS LISTADOS ABAIXO:  ");

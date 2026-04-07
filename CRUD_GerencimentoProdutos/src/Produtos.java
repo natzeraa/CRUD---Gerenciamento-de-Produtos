@@ -4,6 +4,16 @@ public class Produtos {
 
     ArrayList<String> produtos = new ArrayList<>();
 
+    public void CadastrarProduto(String nomeLivro){
+        try {
+            produtos.add(nomeLivro);
+            System.out.printf("O Produto %s foi cadastrado com sucesso!\n", nomeLivro);
+        } catch (Exception error) {
+            System.out.println("Erro ao cadastrar produto: " + error);
+        }
+
+    }
+
     public void ListaProdutos() {
         System.out.println("Lista");
 
