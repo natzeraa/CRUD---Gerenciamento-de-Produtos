@@ -4,9 +4,17 @@ public class Produtos {
 
     ArrayList<String> produtos = new ArrayList<>();
 
-    public void Atualizar (int posicao, String novoNome) {
+    public void ListaProdutos() {
+        System.out.println("Lista");
 
-        if(posicao < 0 || posicao >= produtos.size()){
+        for (int i = 0; i < produtos.size(); i++) {
+            System.out.println((i + 1) + ". " + produtos.get(i));
+        }
+    }
+
+    public void Atualizar(int posicao, String novoNome) {
+
+        if (posicao < 0 || posicao >= produtos.size()) {
             System.out.println("Indice inválido");
         }
 
@@ -25,5 +33,4 @@ public class Produtos {
             System.out.println("Índice inválido!");
         }
     }
-
 }
