@@ -12,6 +12,7 @@ public class Main {
         do{
             System.out.println("Menu");
             System.out.println("[3] - ATUALIZAR PRODUTO");
+            System.out.println("4 - Deletar");
             System.out.println("[0] - SAIR DO PROGRAMA");
 
             System.out.println("Informe uma opcao do menu: ");
@@ -29,6 +30,10 @@ public class Main {
 
                     produto.Atualizar(indice -1, novoNome);
                     break;
+                case 4:
+                    System.out.println("Digite o indice do produto: ");
+                    int index = sc.nextInt();
+                    produto.deletar(index);
 
                 case 0:
                     continuarRodando = false;
