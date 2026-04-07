@@ -27,9 +27,9 @@ public class Main {
                     System.out.print("Informe o nome do Produto: ");
                     String nomeProduto = sc.nextLine();
 
-                    gProdutos.CadastrarProduto(nomeProduto);
+                    produto.CadastrarProduto(nomeProduto);
                     break;
-            }
+
                 case 2:
                     sc.nextLine();
                     System.out.println("PRODUTOS LISTADOS ABAIXO:  ");
@@ -39,19 +39,22 @@ public class Main {
                 case 3:
                     // produto.ListarProdutos();
                     System.out.println("Qual produto deseja atualizar, digite abaixo::");
+                    produto.ListaProdutos();
                     int indice = sc.nextInt();
                     sc.nextLine();
 
-                    System.out.println("Informe o novo nome do livro:  ");
+                    System.out.println("Informe o novo nome do produto:  ");
                     String novoNome = sc.nextLine();
 
                     produto.Atualizar(indice - 1, novoNome);
                     break;
                 case 4:
                     System.out.println("Digite o indice do produto: ");
+                    produto.ListaProdutos();
                     int index = sc.nextInt();
                     produto.deletar(index);
 
+                    break;
                 case 0:
                     continuarRodando = false;
                     System.out.println("Programa finalizado. Obrigado por Utilizar.");

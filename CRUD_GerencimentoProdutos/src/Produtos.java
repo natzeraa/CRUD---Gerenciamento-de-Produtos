@@ -4,10 +4,10 @@ public class Produtos {
 
     ArrayList<String> produtos = new ArrayList<>();
 
-    public void CadastrarProduto(String nomeLivro){
+    public void CadastrarProduto(String nomeProduto){
         try {
-            produtos.add(nomeLivro);
-            System.out.printf("O Produto %s foi cadastrado com sucesso!\n", nomeLivro);
+            produtos.add(nomeProduto);
+            System.out.printf("O Produto %s foi cadastrado com sucesso!\n", nomeProduto);
         } catch (Exception error) {
             System.out.println("Erro ao cadastrar produto: " + error);
         }
@@ -32,7 +32,7 @@ public class Produtos {
 
         produtos.set(posicao, novoNome);
 
-        System.out.printf("Prodeuto '%s' atualizado para '%s' :", valorAntigo, novoNome);
+        System.out.printf("Produto '%s' atualizado para '%s' :", valorAntigo, novoNome);
     }
 
     public void deletar(int index) {
